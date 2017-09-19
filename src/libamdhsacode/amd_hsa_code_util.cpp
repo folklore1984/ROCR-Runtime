@@ -939,7 +939,7 @@ bool ReadFileIntoBuffer(const std::string& filename, std::vector<char>& buffer)
 }
 
 #ifndef _WIN32
-#define _tempnam tempnam
+#define _tempnam tempnam // XXX use mkstemp instead as this is unsafe!!!
 #define _close close
 #define _getpid getpid
 #define _open open
